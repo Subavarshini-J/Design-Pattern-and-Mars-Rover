@@ -65,33 +65,25 @@ public class Main {
         commandMap.put('L',new LeftCommand());
         commandMap.put('R',new RightCommand());
 
-        boolean running = true;
+        System.out.println("\nEnter commands (M=move, L=Left, R=Right) or 'exit' to quit: ");
+        String commandStr = sc.next().toUpperCase();
 
-        // Loop for continuous simulation
-        
-        //while(running)
-        //{
-            System.out.println("\nEnter commands (M=move, L=Left, R=Right) or 'exit' to quit: ");
-            String commandStr = sc.next().toUpperCase();
-
-           
-
-            for(char c:commandStr.toCharArray())
+        for(char c:commandStr.toCharArray())
+        {
+            Command cmd = commandMap.get(c);
+            if(cmd!=null)
             {
-                Command cmd = commandMap.get(c);
-                if(cmd!=null)
-                {
-                    cmd.execute(rover);
-                }
-                else
-                {
-                    System.out.println("Invalid command: "+c);
-                }
+                cmd.execute(rover);
             }
+            else
+            {
+                System.out.println("Invalid command: "+c);
+            }
+        }
 
-            // Final report after each set of commands
+        // Final report after each set of commands
            
-            System.out.println("Status Report: "+rover.report());
-        //}
+        System.out.println("Status Report: "+rover.report());
+        
      }
 }
