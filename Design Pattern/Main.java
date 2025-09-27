@@ -3,7 +3,7 @@ import creational.GameFactory;
 import creational.Weapon;
 import creational.WeaponInventory;
 import behavioral.Character;
-import behavioral.GameState;
+import behavioral.GamePhase;
 import structural.Enemy;
 import structural.ArmoredEnemy;
 
@@ -40,7 +40,7 @@ public class Main {
         }
 
         // Simulate Game State
-        GameState gameState = new GameState();
+        GamePhase gameState = new GamePhase();
         gameState.setState("Started");
 
         // Create an enemy to fight
