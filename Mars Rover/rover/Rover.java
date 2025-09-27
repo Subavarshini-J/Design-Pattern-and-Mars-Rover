@@ -8,40 +8,53 @@ public class Rover {
     private Direction direction;
     private final Grid grid;
 
-    public Rover(Position position, Direction direction, Grid grid)
+    public Rover(Position position, Direction direction, Grid grid) 
     {
+        if (position == null || direction == null || grid == null) 
+        {
+            throw new IllegalArgumentException("Position , Direction , and Grid cannot be null");
+        }
         this.position = position;
         this.direction = direction;
         this.grid = grid;
+
     }
 
-    public void move()
-    {
+    public void move() {
         Position next = direction.moveForward(position);
-        if(!grid.isBlocked(next))
+        if (!grid.isBlocked(next)) 
         {
             this.position = next;
-        }
-        else
+
+        } 
+        else 
         {
-            System.out.println("Obstacle or boundary detected! Staying at "+position);
+
+            System.out.println("Obstacle or boundary detected! Staying at " + position);
         }
     }
 
-    public void turnLeft()
-    {
+    public void turnLeft() {
         direction = direction.turnLeft();
+
     }
 
-    public void turnRight()
-    {
+    public void turnRight() {
         direction = direction.turnRight();
+
     }
 
-    public String report()
-    {
+    public String report() {
 
         return "Rover is at " + position.toString() + " facing " + direction.getName();
+    }
+
+    public Position gePosition() {
+        return position;
+    }
+
+    public Direction gDirection() {
+        return direction;
     }
 
 }
