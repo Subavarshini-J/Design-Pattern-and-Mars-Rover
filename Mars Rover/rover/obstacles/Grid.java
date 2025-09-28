@@ -64,10 +64,5 @@ public class Grid implements GridComponent
     {
         return height;
     }
-
-    public List<GridComponent> gComponents()
-    {
-        return Collections.unmodifiableList(components);
-    }
      
 }
