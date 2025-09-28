@@ -1,27 +1,22 @@
-// src/structural/EnemyDecorator.java
 package structural;
 
-import behavioral.Character;
+public abstract class EnemyDecorator implements Enemy {
+    protected Enemy decoratedEnemy;
 
-public abstract class EnemyDecorator extends Character {
-    protected Character decoratedEnemy;
-
-    public EnemyDecorator(Character decoratedEnemy) {
-        this.decoratedEnemy = decoratedEnemy;
+    public EnemyDecorator(Enemy enemy) 
+    {
+        this.decoratedEnemy = enemy;
     }
 
     @Override
-    public void attack(Character target) {
-        decoratedEnemy.attack(target);
+    public void attack() 
+    {
+        decoratedEnemy.attack();
     }
 
     @Override
-    public void receiveDamage(int damage) {
-        decoratedEnemy.receiveDamage(damage);
-    }
-
-    @Override
-    public String getName() {
-        return decoratedEnemy.getName();
+    public int getDamage() 
+    {
+        return decoratedEnemy.getDamage();
     }
 }
