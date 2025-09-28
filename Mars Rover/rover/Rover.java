@@ -49,11 +49,11 @@ public class Rover {
         return "Rover is at " + position.toString() + " facing " + direction.getName();
     }
 
-    public Position gePosition() {
+    public Position getPosition() {
         return position;
     }
 
-    public Direction gDirection() {
+    public Direction getDirection() {
         return direction;
     }
 
