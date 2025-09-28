@@ -13,19 +13,19 @@ public class Main {
         try {
 
             // Grid Size
-            System.out.println("Enter grid width: ");
+            System.out.print("Enter grid width: ");
             int width = sc.nextInt();
-            System.out.println("Enter grid height: ");
+            System.out.print("Enter grid height: ");
             int height = sc.nextInt();
             Grid grid = Grid.getInstance(width, height);
 
             // Obstacles
 
-            System.out.println("Enter number of obstacles: ");
+            System.out.print("Enter number of obstacles: ");
             int numObstacles = sc.nextInt();
             for (int i = 0; i < numObstacles; i++) 
             {
-                System.out.println("Enter obstacle position (x,y): ");
+                System.out.print("Enter obstacle position (x,y): ");
                 int ox = sc.nextInt();
                 int oy = sc.nextInt();
                 grid.add(new Obstacle(new Position(ox, oy)));
@@ -33,7 +33,7 @@ public class Main {
 
             // Starting position & direction
 
-            System.out.println("Enter starting position (x y): ");
+            System.out.print("Enter starting position (x y): ");
             int startX = sc.nextInt();
             int startY = sc.nextInt();
 
@@ -42,7 +42,7 @@ public class Main {
                 throw new InputMismatchException("Starting position out of bounds");
             }
 
-            System.out.println("Enter starting direction (N/S/E/W): ");
+            System.out.print("Enter starting direction (N/S/E/W): ");
             String dir = sc.next().toUpperCase();
 
             Direction direction;
@@ -74,7 +74,7 @@ public class Main {
             commandMap.put('L', new LeftCommand());
             commandMap.put('R', new RightCommand());
 
-            System.out.println("\nEnter commands (M=move, L=Left, R=Right) or 'exit' to quit: ");
+            System.out.print("Enter commands (M=move, L=Left, R=Right): ");
             String commandStr = sc.next().toUpperCase();
 
             for (char c : commandStr.toCharArray()) 
@@ -87,7 +87,7 @@ public class Main {
                 else 
                 {
                     
-                    System.out.println("Invalid command: " + c);
+                    System.out.print("Invalid command: " + c);
                 }
             }
             // Final report after each set of commands
