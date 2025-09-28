@@ -34,11 +34,8 @@ public class Position
         return this.x == other.x && this.y == other.y;
     }
 
-    public int hashCode()
-    {
-        return 31 * x + y;
-    }
     public String toString() {
         return "(" + x + ", " + y + ")";
     }
 }
+
