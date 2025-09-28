@@ -32,21 +32,21 @@ Models obstacles on the grid and ensures the Rover cannot move through them.
 ## V. Project Structure
 
 - marsrover/
-    - Main.java                         # Entry point for simulation
+    - Main.java   
 - rover/
-    - Rover.java                        # Core rover logic (move, turn, report)
-    - Direction.java                    # Direction interface (N, S, E, W)
-    - Position.java                     # X-Y coordinate model
+    - Rover.java        
+    - Direction.java    
+    - Position.java
 - commands/
-    - Command.java                      # Command interface
-    - MoveCommand.java                  # Encapsulates 'M'
-    - LeftCommand.java                  # Encapsulates 'L'
-    - RightCommand.java                 # Encapsulates 'R'
+    - Command.java      
+    - MoveCommand.java  
+    - LeftCommand.java   
+    - RightCommand.java  
 - obstacles/
-    - GridComponent.java                # Composite base for grid/obstacles
-    - Cell.java                         # Leaf node representing a cell
-    - Obstacle.java                     # Represents an obstacle
-    - Grid.java                         # Grid management & boundary checks
+    - GridComponent.java   
+    - Cell.java          
+    - Obstacle.java        
+    - Grid.java            
 
 ## VI. Compilation and Execution
 - cd marsrover
@@ -58,49 +58,30 @@ Models obstacles on the grid and ensures the Rover cannot move through them.
 
 ## VII. Example Run
 
-- Sample testcase 1:
+- Sample testcase 1: <br>
+Enter grid width: 10 <br>
+Enter grid height: 10 <br>
+Enter number of obstacles: 2 <br>
+Enter obstacle position (x,y): 2 2 <br>
+Enter obstacle position (x,y): 3 5 <br>
+Enter starting position (x y): 0 0 <br>
+Enter starting direction (N/S/E/W): N <br>
+Enter commands (M=move, L=Left, R=Right): MMLMRM <br>
+Obstacle or boundary detected! Staying at (0, 2) <br>
+Status Report: Rover is at (0, 3) facing North <br>
 
-Enter grid width: <br>
-10<br>
-Enter grid height: <br>
-10<br>
-Enter number of obstacles: <br>
-2<br>
-Enter obstacle position (x,y): <br>
-2 2<br>
-Enter obstacle position (x,y): <br>
-3 5<br>
-Enter starting position (x y): <br>
-0 0<br>
-Enter starting direction (N/S/E/W): <br>
-N<br>
-<br>
-Enter commands (M=move, L=Left, R=Right) or 'exit' to quit:<br>
-MMRMM<br>
-Obstacle or boundary detected! Staying at (1, 2)<br>
-Status Report: Rover is at (1, 2) facing East<br>
+- Sample testcase 2: <br>
+Enter grid width: 10 <br>
+Enter grid height: 10 <br>
+Enter number of obstacles: 3 <br>
+Enter obstacle position (x,y): 1 1 <br>
+Enter obstacle position (x,y): 2 9 <br>
+Enter obstacle position (x,y): 7 5 <br>
+Enter starting position (x y): 0 0 <br>
+Enter starting direction (N/S/E/W): E <br>
+Enter commands (M=move, L=Left, R=Right): MLRM <br>
+Status Report: Rover is at (2, 0) facing East <br>
 
-- Sample testcase 2:
-
-Enter grid width: <br>
-10<br>
-Enter grid height: <br>
-10<br>
-Enter number of obstacles: <br>
-2<br>
-Enter obstacle position (x,y):<br>
-2 5<br>
-Enter obstacle position (x,y):<br>
-5 5<br>
-Enter starting position (x y):<br>
-0 0<br>
-Enter starting direction (N/S/E/W):<br>
-E<br>
-<br>
-Enter commands (M=move, L=Left, R=Right) or 'exit' to quit:<br>
-MMLMMRMM<br>
-Status Report: Rover is at (4, 2) facing East<br>
-
-## Author
+## Contact
 For any queries or further information, please reach out to subavarshini454@gmail.com
 
