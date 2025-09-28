@@ -1,6 +1,6 @@
 # :rocket: Mars Rover Simulation
 
-## I. Problem Statement
+## I. Overview
 Welcome to the Mars Rover Simulation!<br>
 Navigate a Rover across a grid-based terrain while avoiding obstacles and staying within boundaries. This application demonstrates OOP design, employs Command, Composite, and Singleton patterns, and follows SOLID principles for clean, scalable and maintainable code. Users can also generate real-time status reports of the Rover's position and direction.
 
